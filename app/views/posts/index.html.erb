@@ -1,12 +1,8 @@
-<h1>つぶやき一覧</h1>
+<h2>つぶやき一覧</h2>
 
 <p><%= notice %></p>
 
 <table>
-  <tr>
-    <th>つぶやき</th>
-  </tr>
-
 <% @posts.each do |post| %>
   <tr>
     <td><%= post.content %></td>

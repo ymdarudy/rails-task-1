@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsTask1</title>
+    <title>つぶやきの部屋</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,16 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <h1>つぶやきの部屋</h1>
+    </header>
+
+    <div>
+      <%= yield %>
+    </div>
+
+    <footer>
+      <p>~自由につぶやきましょう~<br>※1~140文字以内※</p>
+    </footer>
   </body>
 </html>

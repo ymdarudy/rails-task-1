@@ -1,4 +1,4 @@
-<h3>確認。以下の内容でつぶやきますか？</h3>
+<h3>以下の内容でつぶやきますか？</h3>
 
 <%= form_with(model: @post, url: posts_path, local: true) do |form| %>
   <%= form.hidden_field :content %>
@@ -6,5 +6,5 @@
   <p>内容: <%= @post.content %></p>
   <%= form.submit "つぶやく" %>
 
-  <%= form.submit "戻る", name: "back" %>
+  <%= form.submit "修正する", name: "back" %>
 <% end %>
