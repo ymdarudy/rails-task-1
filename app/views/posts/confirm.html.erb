@@ -1,2 +1,10 @@
-<h1>Posts#confirm</h1>
-<p>Find me in app/views/posts/confirm.html.erb</p>
+<h3>確認。以下の内容でつぶやきますか？</h3>
+
+<%= form_with(model: @post, url: posts_path, local: true) do |form| %>
+  <%= form.hidden_field :content %>
+
+  <p>内容: <%= @post.content %></p>
+  <%= form.submit "つぶやく" %>
+
+  <%= form.submit "戻る", name: "back" %>
+<% end %>

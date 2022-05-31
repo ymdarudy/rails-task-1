@@ -11,7 +11,9 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    if @post.save
+    if params[:back]
+      render :new
+    elsif @post.save
       redirect_to posts_path, notice: "つぶやきました！"
     else
       render :new
@@ -38,6 +40,8 @@ class PostsController < ApplicationController
   end
 
   def confirm
+    @post = Post.new(post_params)
+    render :new if @post.invalid?
   end
 
   private
